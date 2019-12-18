@@ -3,7 +3,16 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8801/eureka/
 server:
-  port: 8804
+  port: 8824
 spring:
   application:
     name: feign-consumer
+feign:
+  hystrix:
+    enabled: true
+#全局配置
+ribbon:
+  # 请求连接的超时时间 默认的时间为 1 秒
+  ConnectTimeout: 500000
+  # 请求处理的超时时间
+  ReadTimeout: 500000

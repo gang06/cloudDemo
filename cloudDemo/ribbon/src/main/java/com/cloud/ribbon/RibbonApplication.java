@@ -18,10 +18,10 @@ public class RibbonApplication {
         SpringApplication.run(RibbonApplication.class, args);
     }
 
-    @Bean
+    /*@Bean
     @Autowired
     @LoadBalanced
     RestTemplate restTemplate(){
         return new RestTemplate();
-    }
+    }*/
 }

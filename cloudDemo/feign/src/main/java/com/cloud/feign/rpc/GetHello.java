@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @description: TODO
  * @date 2019/10/23 17:23
  */
-@FeignClient(value = "ribbon-consumer")
+@FeignClient(value = "ribbon-provider",fallback = GetHelloHystrix.class)
 public interface GetHello {
     @RequestMapping(value = "/hello?name=feign",method = RequestMethod.GET)
     public String sayHello();
